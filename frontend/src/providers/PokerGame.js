@@ -46,7 +46,7 @@ class PokerGameProvider extends Component {
       if (err.response && err.response.data && err.response.data.message)
         this.setState({ processingResult: false, messageResult: err.response.data.message })
       else
-        this.setState({ processingResult: false, messageResult: 'Erro ao precessar as mãos, tente novamente' })
+        this.setState({ processingResult: false, messageResult: 'Erro ao processar as mãos, tente novamente' })
     }
   }
 
