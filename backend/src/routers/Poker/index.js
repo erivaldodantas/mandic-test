@@ -8,7 +8,7 @@ const pokerProccess = (req, res) => {
     let { game } = req.body
 
     if (!game) res.status(400).send({
-        message: 'Game is required in body {game}'
+        message: 'Mãos não informadas'
     })
 
     PokerTable.prepareGame(game)
@@ -20,6 +20,6 @@ const pokerProccess = (req, res) => {
 }
 
 
-routerPoker.get('/proccess', pokerProccess)
+routerPoker.post('/proccess', pokerProccess)
 
 module.exports = routerPoker
